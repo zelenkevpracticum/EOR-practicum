@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
-<head>
+<html lang="ru"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Цифровые помощники учителя физики</title>
@@ -79,7 +78,7 @@ footer{background:#1a3a5c;color:#fff;padding:1.5rem 1rem;margin-top:2rem}
 </head>
 <body>
 
-<div id="adminBadge" class="admin-badge">РЕЖИМ РЕДАКТИРОВАНИЯ | <a href="#" onclick="logout()" style="color:#fff">Выйти</a></div>
+<div id="adminBadge" class="admin-badge active">РЕЖИМ РЕДАКТИРОВАНИЯ | <a href="#" onclick="logout()" style="color:#fff">Выйти</a></div>
 
 <header>
 <div class="header-content">
@@ -96,7 +95,7 @@ footer{background:#1a3a5c;color:#fff;padding:1.5rem 1rem;margin-top:2rem}
 </div>
 </header>
 
-<div id="adminBar" class="admin-bar">
+<div id="adminBar" class="admin-bar active">
 <strong>Панель управления:</strong><br><br>
 <button class="btn" onclick="showForm('labs')">+ Работу</button>
 <button class="btn" onclick="showForm('seminars')">+ Семинар</button>
@@ -111,9 +110,249 @@ footer{background:#1a3a5c;color:#fff;padding:1.5rem 1rem;margin-top:2rem}
 <button class="btn btn-red" onclick="logout()">Выйти</button>
 </div>
 
-<nav><ul id="navMenu"></ul></nav>
+<nav><ul id="navMenu"><li><a href="#labs">Лабораторные работы</a></li><li><a href="#seminars">Семинары</a></li><li><a href="#tools">Инструменты</a></li><li><a href="#prompts">Библиотека промптов</a></li><li><a href="#instructions">Инструкции</a></li></ul></nav>
 
-<main id="mainContent"></main>
+<main id="mainContent"><section><h2>О практикуме</h2>
+    <p><b>Дисциплина:</b> Создание и использование электронных образовательных ресурсов</p>
+    <p><b>Автор:</b> Зеленкевич В.М. доцент кафедры физики и методики преподавания физики</p>
+    <p style="margin-top:.8rem">Практикум включает 16 лабораторных работ и 11 семинарских занятий. Итоговый проект — персональный сайт-портфолио учителя физики.</p>
+    <div class="stats">
+      <div class="stat-box"><span class="num">16</span><span class="lbl">Лабораторных</span></div>
+      <div class="stat-box"><span class="num">11</span><span class="lbl">Семинаров</span></div>
+      <div class="stat-box"><span class="num">12</span><span class="lbl">Инструментов</span></div>
+      <div class="stat-box"><span class="num">5</span><span class="lbl">Промптов</span></div>
+      <div class="stat-box"><span class="num">9</span><span class="lbl">Инструкций</span></div>
+    </div></section><section id="labs"><h2>Лабораторные работы</h2><div class="cards"><div class="card"><h3>№1. Основы педагогического промпт-инжиниринга</h3>
+      <p><b>Цель:</b> Освоить базовые техники составления запросов к нейросетям</p>
+      <p><b>Инструменты:</b> YandexGPT, GigaChat, DeepSeek</p>
+      <p><b>Продукт:</b> Мини-методичка «Библиотека идеальных промптов»</p><div class="tags"><span class="tag">Раздел 1</span><span class="tag">Сем. №1, №2</span></div><button class="btn" onclick="openModal('&lt;h2&gt;№1. Основы педагогического промпт-инжиниринга&lt;/h2&gt;&lt;h3&gt;Цель&lt;/h3&gt;&lt;p&gt;Освоить базовые техники промпт-инжиниринга.&lt;/p&gt;&lt;h3&gt;Основные шаги&lt;/h3&gt;&lt;ol&gt;&lt;li&gt;Регистрация в YandexGPT и GigaChat.&lt;/li&gt;&lt;li&gt;Сравнение «плохого» и «хорошего» промпта.&lt;/li&gt;&lt;li&gt;Освоение ролевых промптов.&lt;/li&gt;&lt;/ol&gt;&lt;h3&gt;Результат&lt;/h3&gt;&lt;p&gt;Мини-методичка (PDF, 4–6 страниц).&lt;/p&gt;')">Описание</button><a href="https://disk.yandex.ru/i/fhFtpkDbX_fhbw" target="_blank" class="btn btn-green" style="margin-left:.5rem">PDF</a><div class="card-admin active"><button class="btn" onclick="showForm('labs',0)">Ред.</button><button class="btn btn-red" onclick="del('labs',0)">Удалить</button></div></div><div class="card"><h3>№2. ИИ как методист: проектирование плана урока</h3>
+      <p><b>Цель:</b> Научиться генерировать структуру урока с помощью ИИ</p>
+      <p><b>Инструменты:</b> GigaChat, YandexGPT, DeepSeek</p>
+      <p><b>Продукт:</b> Технологическая карта урока</p><div class="tags"><span class="tag">Раздел 1</span><span class="tag">Сем. №1, №2</span></div><button class="btn" onclick="openModal('&lt;h2&gt;№2. ИИ как методист: проектирование плана урока&lt;/h2&gt;&lt;h3&gt;Цель&lt;/h3&gt;&lt;p&gt;Сгенерировать технологическую карту урока.&lt;/p&gt;&lt;h3&gt;Шаги&lt;/h3&gt;&lt;ol&gt;&lt;li&gt;Задать роль методиста.&lt;/li&gt;&lt;li&gt;Расписать этапы урока.&lt;/li&gt;&lt;li&gt;Сформулировать цели.&lt;/li&gt;&lt;/ol&gt;')">Описание</button><a href="https://disk.yandex.ru/i/ylzJRZNBwERa1w" target="_blank" class="btn btn-green" style="margin-left:.5rem">PDF</a><div class="card-admin active"><button class="btn" onclick="showForm('labs',1)">Ред.</button><button class="btn btn-red" onclick="del('labs',1)">Удалить</button></div></div><div class="card"><h3>№3. Генерация дидактических материалов</h3>
+      <p><b>Цель:</b> Генерация разноуровневых задач с верификацией</p>
+      <p><b>Инструменты:</b> YandexGPT, DeepSeek</p>
+      <p><b>Продукт:</b> Банк разноуровневых задач</p><div class="tags"><span class="tag">Раздел 1</span><span class="tag">Сем. №3, №4, №5</span></div><button class="btn" onclick="openModal('&lt;h2&gt;№3. Генерация дидактических материалов&lt;/h2&gt;&lt;h3&gt;Цель&lt;/h3&gt;&lt;p&gt;Создать банк задач с верификацией.&lt;/p&gt;&lt;h3&gt;Шаги&lt;/h3&gt;&lt;ol&gt;&lt;li&gt;Сгенерировать задачи.&lt;/li&gt;&lt;li&gt;Перерешать вручную.&lt;/li&gt;&lt;li&gt;Двойная верификация.&lt;/li&gt;&lt;/ol&gt;')">Описание</button><a href="https://disk.yandex.ru/i/mi4j8I23zVtTbA" target="_blank" class="btn btn-green" style="margin-left:.5rem">PDF</a><div class="card-admin active"><button class="btn" onclick="showForm('labs',2)">Ред.</button><button class="btn btn-red" onclick="del('labs',2)">Удалить</button></div></div><div class="card"><h3>№4. Проектирование мотивационного этапа</h3>
+      <p><b>Цель:</b> Генерация «крючков внимания»</p>
+      <p><b>Инструменты:</b> YandexGPT, GigaChat</p>
+      <p><b>Продукт:</b> Банк карточек «Крючки внимания»</p><div class="tags"><span class="tag">Раздел 1</span><span class="tag">Сем. №2</span></div><button class="btn" onclick="openModal('&lt;h2&gt;№4. Проектирование мотивационного этапа&lt;/h2&gt;&lt;h3&gt;Цель&lt;/h3&gt;&lt;p&gt;Создать мотивационные материалы.&lt;/p&gt;')">Описание</button><a href="https://disk.yandex.ru/i/3GvYZjZ1QidpcA" target="_blank" class="btn btn-green" style="margin-left:.5rem">PDF</a><div class="card-admin active"><button class="btn" onclick="showForm('labs',3)">Ред.</button><button class="btn btn-red" onclick="del('labs',3)">Удалить</button></div></div><div class="card"><h3>№5. Проектирование оценивания и рефлексии</h3>
+      <p><b>Цель:</b> Генерация рубрикаторов и чек-листов</p>
+      <p><b>Инструменты:</b> GigaChat, DeepSeek</p>
+      <p><b>Продукт:</b> Пакет рубрикаторов</p><div class="tags"><span class="tag">Раздел 2</span><span class="tag">Сем. №5</span></div><button class="btn" onclick="openModal('&lt;h2&gt;№5. Проектирование оценивания и рефлексии&lt;/h2&gt;&lt;h3&gt;Цель&lt;/h3&gt;&lt;p&gt;Освоить генерацию инструментов оценивания.&lt;/p&gt;')">Описание</button><a href="https://disk.yandex.ru/i/NAkOlqELb4RmEg" target="_blank" class="btn btn-green" style="margin-left:.5rem">PDF</a><div class="card-admin active"><button class="btn" onclick="showForm('labs',4)">Ред.</button><button class="btn btn-red" onclick="del('labs',4)">Удалить</button></div></div><div class="card"><h3>№6. Визуализация физических явлений</h3>
+      <p><b>Цель:</b> Нейрографика для физики</p>
+      <p><b>Инструменты:</b> Kandinsky, Шедеврум, YandexART</p>
+      <p><b>Продукт:</b> Пакет иллюстраций</p><div class="tags"><span class="tag">Раздел 2</span><span class="tag">Сем. №6</span></div><button class="btn" onclick="openModal('&lt;h2&gt;№6. Визуализация физических явлений&lt;/h2&gt;&lt;h3&gt;Цель&lt;/h3&gt;&lt;p&gt;Создать визуальные ЭОР.&lt;/p&gt;')">Описание</button><a href="https://disk.yandex.ru/i/7DlKsn2uHDBe_Q" target="_blank" class="btn btn-green" style="margin-left:.5rem">PDF</a><div class="card-admin active"><button class="btn" onclick="showForm('labs',5)">Ред.</button><button class="btn btn-red" onclick="del('labs',5)">Удалить</button></div></div><div class="card"><h3>№7. Создание аудио- и видео-ЭОР</h3>
+      <p><b>Цель:</b> Подкасты и видеоролики с ИИ</p>
+      <p><b>Инструменты:</b> Yandex SpeechKit, CapCut, Hailuo AI</p>
+      <p><b>Продукт:</b> Аудио/видео файл</p><div class="tags"><span class="tag">Раздел 2</span><span class="tag">Сем. №9</span></div><button class="btn" onclick="openModal('&lt;h2&gt;№7. Создание аудио- и видео-ЭОР&lt;/h2&gt;&lt;h3&gt;Цель&lt;/h3&gt;&lt;p&gt;Создать аудио/видео ЭОР.&lt;/p&gt;')">Описание</button><a href="https://disk.yandex.ru/i/2pqZYj7QzaJLVg" target="_blank" class="btn btn-green" style="margin-left:.5rem">PDF</a><div class="card-admin active"><button class="btn" onclick="showForm('labs',6)">Ред.</button><button class="btn btn-red" onclick="del('labs',6)">Удалить</button></div></div><div class="card"><h3>№8. Web-кодинг: интерактивные симуляции</h3>
+      <p><b>Цель:</b> Генерация HTML/JS кода</p>
+      <p><b>Инструменты:</b> DeepSeek, GigaChat + Блокнот</p>
+      <p><b>Продукт:</b> HTML-файл модели</p><div class="tags"><span class="tag">Раздел 2</span><span class="tag">Сем. №4, №7</span></div><button class="btn" onclick="openModal('&lt;h2&gt;№8. Web-кодинг: интерактивные симуляции&lt;/h2&gt;&lt;h3&gt;Цель&lt;/h3&gt;&lt;p&gt;Создать интерактивную симуляцию.&lt;/p&gt;&lt;h3&gt;Шаги&lt;/h3&gt;&lt;ol&gt;&lt;li&gt;Промпт для ИИ.&lt;/li&gt;&lt;li&gt;Сохранить как .html.&lt;/li&gt;&lt;li&gt;Итерация и доработка.&lt;/li&gt;&lt;/ol&gt;')">Описание</button><a href="https://disk.yandex.ru/i/ouXpcPY6yFVC6g" target="_blank" class="btn btn-green" style="margin-left:.5rem">PDF</a><div class="card-admin active"><button class="btn" onclick="showForm('labs',7)">Ред.</button><button class="btn btn-red" onclick="del('labs',7)">Удалить</button></div></div><div class="card"><h3>№9. Создание тестов с использованием ИИ</h3>
+      <p><b>Цель:</b> Автоматизированные тесты</p>
+      <p><b>Инструменты:</b> YandexGPT, DeepSeek + Яндекс.Формы</p>
+      <p><b>Продукт:</b> Ссылка на тест</p><div class="tags"><span class="tag">Раздел 3</span><span class="tag">Сем. №3, №5</span></div><button class="btn" onclick="openModal('&lt;h2&gt;№9. Создание тестов с использованием ИИ&lt;/h2&gt;&lt;h3&gt;Цель&lt;/h3&gt;&lt;p&gt;Создать тест с обратной связью.&lt;/p&gt;')">Описание</button><a href="https://disk.yandex.ru/i/9JO0898CX5nh1A" target="_blank" class="btn btn-green" style="margin-left:.5rem">PDF</a><div class="card-admin active"><button class="btn" onclick="showForm('labs',8)">Ред.</button><button class="btn btn-red" onclick="del('labs',8)">Удалить</button></div></div><div class="card"><h3>№10. Цифровые рабочие листы</h3>
+      <p><b>Цель:</b> Digital Worksheets</p>
+      <p><b>Инструменты:</b> Kimi, GigaChat + Яндекс.Документы</p>
+      <p><b>Продукт:</b> Ссылка на рабочий лист</p><div class="tags"><span class="tag">Раздел 3</span><span class="tag">Сем. №8</span></div><button class="btn" onclick="openModal('&lt;h2&gt;№10. Цифровые рабочие листы&lt;/h2&gt;&lt;h3&gt;Цель&lt;/h3&gt;&lt;p&gt;Создать цифровой рабочий лист.&lt;/p&gt;')">Описание</button><a href="https://disk.yandex.ru/i/tWHLv70NVFWILg" target="_blank" class="btn btn-green" style="margin-left:.5rem">PDF</a><div class="card-admin active"><button class="btn" onclick="showForm('labs',9)">Ред.</button><button class="btn btn-red" onclick="del('labs',9)">Удалить</button></div></div><div class="card"><h3>№11. ИИ-презентации</h3>
+      <p><b>Цель:</b> Сборка презентации урока</p>
+      <p><b>Инструменты:</b> Gamma.app, GigaChat + PowerPoint</p>
+      <p><b>Продукт:</b> Презентация</p><div class="tags"><span class="tag">Раздел 3</span><span class="tag">Сем. №6</span></div><button class="btn" onclick="openModal('&lt;h2&gt;№11. ИИ-презентации&lt;/h2&gt;&lt;h3&gt;Цель&lt;/h3&gt;&lt;p&gt;Создать презентацию урока.&lt;/p&gt;')">Описание</button><a href="https://disk.yandex.ru/i/9CCMoNBnO9UgWA" target="_blank" class="btn btn-green" style="margin-left:.5rem">PDF</a><div class="card-admin active"><button class="btn" onclick="showForm('labs',10)">Ред.</button><button class="btn btn-red" onclick="del('labs',10)">Удалить</button></div></div><div class="card"><h3>№12. Методика включения ЦОР</h3>
+      <p><b>Цель:</b> Встраивание ЭОР в урок</p>
+      <p><b>Инструменты:</b> GigaChat, DeepSeek</p>
+      <p><b>Продукт:</b> Технологическая карта фрагмента</p><div class="tags"><span class="tag">Раздел 3</span><span class="tag">Сем. №7, №8</span></div><button class="btn" onclick="openModal('&lt;h2&gt;№12. Методика включения ЦОР&lt;/h2&gt;&lt;h3&gt;Цель&lt;/h3&gt;&lt;p&gt;Освоить методику применения ЭОР.&lt;/p&gt;')">Описание</button><a href="https://disk.yandex.ru/i/9VxevrfXIbin2g" target="_blank" class="btn btn-green" style="margin-left:.5rem">PDF</a><div class="card-admin active"><button class="btn" onclick="showForm('labs',11)">Ред.</button><button class="btn btn-red" onclick="del('labs',11)">Удалить</button></div></div><div class="card"><h3>№13. Геймификация урока</h3>
+      <p><b>Цель:</b> Образовательные квесты</p>
+      <p><b>Инструменты:</b> GigaChat, Kandinsky</p>
+      <p><b>Продукт:</b> Сценарий квеста</p><div class="tags"><span class="tag">Раздел 4</span><span class="tag">Сем. №8</span></div><button class="btn" onclick="openModal('&lt;h2&gt;№13. Геймификация урока&lt;/h2&gt;&lt;h3&gt;Цель&lt;/h3&gt;&lt;p&gt;Создать игровой формат урока.&lt;/p&gt;')">Описание</button><a href="https://disk.yandex.ru/i/Qzr54WpCHTs3-A" target="_blank" class="btn btn-green" style="margin-left:.5rem">PDF</a><div class="card-admin active"><button class="btn" onclick="showForm('labs',12)">Ред.</button><button class="btn btn-red" onclick="del('labs',12)">Удалить</button></div></div><div class="card"><h3>№14. ИИ-ассистент для формирующего оценивания</h3>
+      <p><b>Цель:</b> Персонализированные комментарии</p>
+      <p><b>Инструменты:</b> YandexGPT, DeepSeek</p>
+      <p><b>Продукт:</b> Банк комментариев</p><div class="tags"><span class="tag">Раздел 4</span><span class="tag">Сем. №3, №5</span></div><button class="btn" onclick="openModal('&lt;h2&gt;№14. ИИ-ассистент для формирующего оценивания&lt;/h2&gt;&lt;h3&gt;Цель&lt;/h3&gt;&lt;p&gt;Освоить формирующее оценивание.&lt;/p&gt;')">Описание</button><a href="https://disk.yandex.ru/i/WcSKzGYd5TTIAw" target="_blank" class="btn btn-green" style="margin-left:.5rem">PDF</a><div class="card-admin active"><button class="btn" onclick="showForm('labs',13)">Ред.</button><button class="btn btn-red" onclick="del('labs',13)">Удалить</button></div></div><div class="card"><h3>№15. Сборка сайта-портфолио</h3>
+      <p><b>Цель:</b> Интеграция ЭОР</p>
+      <p><b>Инструменты:</b> HTML-шаблон + Блокнот</p>
+      <p><b>Продукт:</b> Опубликованный сайт</p><div class="tags"><span class="tag">Раздел 4</span><span class="tag">Сем. №9, №10</span></div><button class="btn" onclick="openModal('&lt;h2&gt;№15. Сборка сайта-портфолио&lt;/h2&gt;&lt;h3&gt;Цель&lt;/h3&gt;&lt;p&gt;Собрать сайт-портфолио.&lt;/p&gt;')">Описание</button><a href="https://disk.yandex.ru/i/ujDSsmelDoGiAQ" target="_blank" class="btn btn-green" style="margin-left:.5rem">PDF</a><div class="card-admin active"><button class="btn" onclick="showForm('labs',14)">Ред.</button><button class="btn btn-red" onclick="del('labs',14)">Удалить</button></div></div><div class="card"><h3>№16. Итоговая защита проекта</h3>
+      <p><b>Цель:</b> Публичная презентация</p>
+      <p><b>Инструменты:</b> Персональный сайт</p>
+      <p><b>Продукт:</b> Видеозапись фрагмента урока</p><div class="tags"><span class="tag">Раздел 4</span><span class="tag">Сем. №11</span></div><button class="btn" onclick="openModal('&lt;h2&gt;№16. Итоговая защита проекта&lt;/h2&gt;&lt;h3&gt;Цель&lt;/h3&gt;&lt;p&gt;Защитить итоговый проект.&lt;/p&gt;')">Описание</button><a href="https://disk.yandex.ru/i/HGZmS_llcay33A" target="_blank" class="btn btn-green" style="margin-left:.5rem">PDF</a><div class="card-admin active"><button class="btn" onclick="showForm('labs',15)">Ред.</button><button class="btn btn-red" onclick="del('labs',15)">Удалить</button></div></div></div></section><section id="seminars"><h2>Семинары</h2><div class="cards"><div class="card"><h3>Семинар №1. Вводный. Роль ЭОР в уроке физики</h3>
+      <p>Обзор бесплатных ИИ-сервисов</p><p><b>Форма:</b> Лекция-дискуссия</p>
+      <p style="font-size:.85rem;color:#888"><b>Связь:</b> Подготовительный к Лаб. №1</p>
+      <div class="card-admin active"><button class="btn" onclick="showForm('seminars',0)">Ред.</button><button class="btn btn-red" onclick="del('seminars',0)">Удалить</button></div></div><div class="card"><h3>Семинар №2. Промпт как педагогический инструмент</h3>
+      <p>Разбор удачных запросов</p><p><b>Форма:</b> Мастер-класс</p>
+      <p style="font-size:.85rem;color:#888"><b>Связь:</b> Закрепление Лаб. №1</p>
+      <div class="card-admin active"><button class="btn" onclick="showForm('seminars',1)">Ред.</button><button class="btn btn-red" onclick="del('seminars',1)">Удалить</button></div></div><div class="card"><h3>Семинар №3. Проблема «ИИ-галлюцинаций»</h3>
+      <p>Разбор ошибок ИИ</p><p><b>Форма:</b> Кейс-стади</p>
+      <p style="font-size:.85rem;color:#888"><b>Связь:</b> Сквозной для Лаб. №3, №9, №14</p>
+      <div class="card-admin active"><button class="btn" onclick="showForm('seminars',2)">Ред.</button><button class="btn btn-red" onclick="del('seminars',2)">Удалить</button></div></div><div class="card"><h3>Семинар №4. Сравнение российских и китайских нейросетей</h3>
+      <p>YandexGPT vs DeepSeek vs GigaChat</p><p><b>Форма:</b> Практическое сравнение</p>
+      <p style="font-size:.85rem;color:#888"><b>Связь:</b> Подготовительный к Лаб. №3, №8</p>
+      <div class="card-admin active"><button class="btn" onclick="showForm('seminars',3)">Ред.</button><button class="btn btn-red" onclick="del('seminars',3)">Удалить</button></div></div><div class="card"><h3>Семинар №5. Дифференциация обучения с помощью ИИ</h3>
+      <p>Работа с разными уровнями</p><p><b>Форма:</b> Анализ заданий</p>
+      <p style="font-size:.85rem;color:#888"><b>Связь:</b> Сопровождение Лаб. №3, №5</p>
+      <div class="card-admin active"><button class="btn" onclick="showForm('seminars',4)">Ред.</button><button class="btn btn-red" onclick="del('seminars',4)">Удалить</button></div></div><div class="card"><h3>Семинар №6. Визуальный язык физики</h3>
+      <p>Где ИИ искажает физику</p><p><b>Форма:</b> Критический анализ</p>
+      <p style="font-size:.85rem;color:#888"><b>Связь:</b> Подготовительный к Лаб. №6</p>
+      <div class="card-admin active"><button class="btn" onclick="showForm('seminars',5)">Ред.</button><button class="btn btn-red" onclick="del('seminars',5)">Удалить</button></div></div><div class="card"><h3>Семинар №7. Методика использования ЭОР</h3>
+      <p>Фрагменты уроков с ЭОР</p><p><b>Форма:</b> Микро-преподавание</p>
+      <p style="font-size:.85rem;color:#888"><b>Связь:</b> Сопровождение Лаб. №8, №12</p>
+      <div class="card-admin active"><button class="btn" onclick="showForm('seminars',6)">Ред.</button><button class="btn btn-red" onclick="del('seminars',6)">Удалить</button></div></div><div class="card"><h3>Семинар №8. Смешанное обучение</h3>
+      <p>Перевёрнутый класс</p><p><b>Форма:</b> Проектирование в группах</p>
+      <p style="font-size:.85rem;color:#888"><b>Связь:</b> Подготовительный к Лаб. №10, №13</p>
+      <div class="card-admin active"><button class="btn" onclick="showForm('seminars',7)">Ред.</button><button class="btn btn-red" onclick="del('seminars',7)">Удалить</button></div></div><div class="card"><h3>Семинар №9. Цифровая этика учителя</h3>
+      <p>Авторское право, данные</p><p><b>Форма:</b> Дискуссия</p>
+      <p style="font-size:.85rem;color:#888"><b>Связь:</b> Сквозной для Лаб. №7, №15</p>
+      <div class="card-admin active"><button class="btn" onclick="showForm('seminars',8)">Ред.</button><button class="btn btn-red" onclick="del('seminars',8)">Удалить</button></div></div><div class="card"><h3>Семинар №10. Критерии качественного ЭОР</h3>
+      <p>Подготовка к защите</p><p><b>Форма:</b> Выработка чек-листа</p>
+      <p style="font-size:.85rem;color:#888"><b>Связь:</b> Подготовительный к Лаб. №15</p>
+      <div class="card-admin active"><button class="btn" onclick="showForm('seminars',9)">Ред.</button><button class="btn btn-red" onclick="del('seminars',9)">Удалить</button></div></div><div class="card"><h3>Семинар №11. Итоговый семинар-защита</h3>
+      <p>Презентация сайтов</p><p><b>Форма:</b> Защита проектов</p>
+      <p style="font-size:.85rem;color:#888"><b>Связь:</b> Завершение Лаб. №16</p>
+      <div class="card-admin active"><button class="btn" onclick="showForm('seminars',10)">Ред.</button><button class="btn btn-red" onclick="del('seminars',10)">Удалить</button></div></div></div></section><section id="tools"><h2>Инструменты</h2><div class="cards"><div class="card"><h3>YandexGPT</h3><p>Основной инструмент для промпт-инжиниринга</p>
+      <div class="tags"><span class="tag">Текстовые нейросети</span></div>
+      <a href="https://yandex.ru/chat" target="_blank" class="btn">Перейти</a>
+      <div class="card-admin active"><button class="btn" onclick="showForm('tools',0)">Ред.</button><button class="btn btn-red" onclick="del('tools',0)">Удалить</button></div></div><div class="card"><h3>GigaChat</h3><p>Альтернатива от Сбера</p>
+      <div class="tags"><span class="tag">Текстовые нейросети</span></div>
+      <a href="https://giga.chat" target="_blank" class="btn">Перейти</a>
+      <div class="card-admin active"><button class="btn" onclick="showForm('tools',1)">Ред.</button><button class="btn btn-red" onclick="del('tools',1)">Удалить</button></div></div><div class="card"><h3>DeepSeek</h3><p>Эффективна для физики и кода</p>
+      <div class="tags"><span class="tag">Текстовые нейросети</span></div>
+      <a href="https://chat.deepseek.com" target="_blank" class="btn">Перейти</a>
+      <div class="card-admin active"><button class="btn" onclick="showForm('tools',2)">Ред.</button><button class="btn btn-red" onclick="del('tools',2)">Удалить</button></div></div><div class="card"><h3>Kimi</h3><p>Работа с длинными документами</p>
+      <div class="tags"><span class="tag">Текстовые нейросети</span></div>
+      <a href="https://kimi.ai" target="_blank" class="btn">Перейти</a>
+      <div class="card-admin active"><button class="btn" onclick="showForm('tools',3)">Ред.</button><button class="btn btn-red" onclick="del('tools',3)">Удалить</button></div></div><div class="card"><h3>Kandinsky</h3><p>Генерация изображений</p>
+      <div class="tags"><span class="tag">Нейрографика</span></div>
+      <a href="https://fusionbrain.ai" target="_blank" class="btn">Перейти</a>
+      <div class="card-admin active"><button class="btn" onclick="showForm('tools',4)">Ред.</button><button class="btn btn-red" onclick="del('tools',4)">Удалить</button></div></div><div class="card"><h3>YandexART</h3><p>Альтернатива Kandinsky</p>
+      <div class="tags"><span class="tag">Нейрографика</span></div>
+      <a href="https://art.yandex.ru" target="_blank" class="btn">Перейти</a>
+      <div class="card-admin active"><button class="btn" onclick="showForm('tools',5)">Ред.</button><button class="btn btn-red" onclick="del('tools',5)">Удалить</button></div></div><div class="card"><h3>Шедеврум</h3><p>Генератор от Яндекса</p>
+      <div class="tags"><span class="tag">Нейрографика</span></div>
+      <a href="https://shedevrum.ai" target="_blank" class="btn">Перейти</a>
+      <div class="card-admin active"><button class="btn" onclick="showForm('tools',6)">Ред.</button><button class="btn btn-red" onclick="del('tools',6)">Удалить</button></div></div><div class="card"><h3>Jimeng AI</h3><p>Китайский генератор</p>
+      <div class="tags"><span class="tag">Нейрографика</span></div>
+      <a href="https://jimeng.jianying.com" target="_blank" class="btn">Перейти</a>
+      <div class="card-admin active"><button class="btn" onclick="showForm('tools',7)">Ред.</button><button class="btn btn-red" onclick="del('tools',7)">Удалить</button></div></div><div class="card"><h3>Hailuo AI</h3><p>Генерация видеороликов</p>
+      <div class="tags"><span class="tag">Видеогенерация</span></div>
+      <a href="https://hailuoai.video" target="_blank" class="btn">Перейти</a>
+      <div class="card-admin active"><button class="btn" onclick="showForm('tools',8)">Ред.</button><button class="btn btn-red" onclick="del('tools',8)">Удалить</button></div></div><div class="card"><h3>Gamma.app</h3><p>ИИ-генератор презентаций</p>
+      <div class="tags"><span class="tag">Презентации</span></div>
+      <a href="https://gamma.app" target="_blank" class="btn">Перейти</a>
+      <div class="card-admin active"><button class="btn" onclick="showForm('tools',9)">Ред.</button><button class="btn btn-red" onclick="del('tools',9)">Удалить</button></div></div><div class="card"><h3>Яндекс.Формы</h3><p>Автоматизированные тесты</p>
+      <div class="tags"><span class="tag">Тесты</span></div>
+      <a href="https://forms.yandex.ru" target="_blank" class="btn">Перейти</a>
+      <div class="card-admin active"><button class="btn" onclick="showForm('tools',10)">Ред.</button><button class="btn btn-red" onclick="del('tools',10)">Удалить</button></div></div><div class="card"><h3>Notion</h3><p>Платформа для сайтов</p>
+      <div class="tags"><span class="tag">Сайты</span></div>
+      <a href="https://notion.so" target="_blank" class="btn">Перейти</a>
+      <div class="card-admin active"><button class="btn" onclick="showForm('tools',11)">Ред.</button><button class="btn btn-red" onclick="del('tools',11)">Удалить</button></div></div></div></section><section id="prompts"><h2>Библиотека промптов</h2><div class="cards"><div class="card" style="min-height:250px;display:flex;flex-direction:column"><h3>Промпт для объяснения темы</h3><p>Универсальный запрос</p>
+      <div class="tags"><span class="tag">Дидактика</span></div>
+      <pre style="flex:1;white-space:pre-wrap;word-wrap:break-word;overflow-y:auto;max-height:200px;font-size:0.8rem">Ты — учитель физики. Объясни тему '[ТЕМА]' девятиклассникам в формате короткого текста (не более 200 слов). Используй одну бытовую аналогию.</pre>
+      <div class="card-admin active"><button class="btn" onclick="showForm('prompts',0)">Ред.</button><button class="btn btn-red" onclick="del('prompts',0)">Удалить</button></div></div><div class="card" style="min-height:250px;display:flex;flex-direction:column"><h3>Промпт для генерации задач</h3><p>Разноуровневые задачи</p>
+      <div class="tags"><span class="tag">Дидактика</span></div>
+      <pre style="flex:1;white-space:pre-wrap;word-wrap:break-word;overflow-y:auto;max-height:200px;font-size:0.8rem">Ты — методист по физике. Сгенерируй 4 расчётные задачи по теме '[ТЕМА]' для [КЛАСС] класса: 2 базовых, 1 повышенный, 1 олимпиадный.</pre>
+      <div class="card-admin active"><button class="btn" onclick="showForm('prompts',1)">Ред.</button><button class="btn btn-red" onclick="del('prompts',1)">Удалить</button></div></div><div class="card" style="min-height:250px;display:flex;flex-direction:column"><h3>Промпт для плана урока</h3><p>Технологическая карта</p>
+      <div class="tags"><span class="tag">Проектирование</span></div>
+      <pre style="flex:1;white-space:pre-wrap;word-wrap:break-word;overflow-y:auto;max-height:200px;font-size:0.8rem">Ты — учитель физики высшей категории. Разработай технологическую карту урока для [КЛАСС] класса по теме '[ТЕМА]'.</pre>
+      <div class="card-admin active"><button class="btn" onclick="showForm('prompts',2)">Ред.</button><button class="btn btn-red" onclick="del('prompts',2)">Удалить</button></div></div><div class="card" style="min-height:250px;display:flex;flex-direction:column"><h3>Промпт для «крючка внимания»</h3><p>Проблемные ситуации</p>
+      <div class="tags"><span class="tag">Мотивация</span></div>
+      <pre style="flex:1;white-space:pre-wrap;word-wrap:break-word;overflow-y:auto;max-height:200px;font-size:0.8rem">Придумай 3 варианта «крючка внимания» для урока физики в [КЛАСС] классе по теме '[ТЕМА]'.</pre>
+      <div class="card-admin active"><button class="btn" onclick="showForm('prompts',3)">Ред.</button><button class="btn btn-red" onclick="del('prompts',3)">Удалить</button></div></div><div class="card" style="min-height:250px;display:flex;flex-direction:column"><h3>Промпт для Web-кодинга</h3><p>Интерактивная модель</p>
+      <div class="tags"><span class="tag">Программирование</span></div>
+      <pre style="flex:1;white-space:pre-wrap;word-wrap:break-word;overflow-y:auto;max-height:200px;font-size:0.8rem">Действуй как Senior Web-разработчик. Напиши код интерактивной физической симуляции на HTML/CSS/JS. Тема: [ТЕМА].</pre>
+      <div class="card-admin active"><button class="btn" onclick="showForm('prompts',4)">Ред.</button><button class="btn btn-red" onclick="del('prompts',4)">Удалить</button></div></div></div></section><section id="instructions"><h2>Инструкции</h2>
+    <p style="margin-bottom:1rem;color:#666">Пошаговые руководства для работы с сервисами и инструментами практикума</p>
+    <div class="filters">
+      <button class="btn" onclick="filterInstructions('all')" style="background:#1a3a5c">Все</button>
+      <button class="btn" onclick="filterInstructions('Регистрация')">Регистрация</button>
+      <button class="btn" onclick="filterInstructions('Нейросети')">Нейросети</button>
+      <button class="btn" onclick="filterInstructions('Публикация')">Публикация</button>
+    </div>
+    <div class="cards"><div class="card instruction-card" data-category="Регистрация">
+      <div class="instruction-icon"></div>
+      <h3>Инструкция №1. Регистрация на Яндекс.Диске</h3>
+      <p>Как зарегистрироваться, создавать папки, загружать PDF-методички и получать публичные ссылки для сайта</p>
+      <div class="tags">
+        <span class="tag">Регистрация</span>
+        <span class="tag">Все лабораторные работы</span>
+      </div>
+      <a href="https://disk.yandex.ru/i/td0T3vYSY2JBqQ" target="_blank" class="btn btn-green">Скачать PDF</a>
+      <div class="card-admin active"><button class="btn" onclick="showForm('instructions',0)">Ред.</button><button class="btn btn-red" onclick="del('instructions',0)">Удалить</button></div>
+    </div><div class="card instruction-card" data-category="Нейросети">
+      <div class="instruction-icon"></div>
+      <h3>Инструкция №2. Первые шаги в GigaChat</h3>
+      <p>Регистрация через Сбер ID, написание промптов для генерации кода физических симуляций</p>
+      <div class="tags">
+        <span class="tag">Нейросети</span>
+        <span class="tag">Лаб. №8 (Web-кодинг)</span>
+      </div>
+      <a href="https://disk.yandex.ru/i/l0jMZRN8WxU0xg" target="_blank" class="btn btn-green">Скачать PDF</a>
+      <div class="card-admin active"><button class="btn" onclick="showForm('instructions',1)">Ред.</button><button class="btn btn-red" onclick="del('instructions',1)">Удалить</button></div>
+    </div><div class="card instruction-card" data-category="Нейросети">
+      <div class="instruction-icon"></div>
+      <h3>Инструкция №3. Первые шаги в YandexGPT</h3>
+      <p>Регистрация через Яндекс ID, составление педагогических промптов для методических материалов</p>
+      <div class="tags">
+        <span class="tag">Нейросети</span>
+        <span class="tag">Лаб. №1, №2, №3, №4</span>
+      </div>
+      <a href="https://disk.yandex.ru/i/nsfsJk0gRaGebQ" target="_blank" class="btn btn-green">Скачать PDF</a>
+      <div class="card-admin active"><button class="btn" onclick="showForm('instructions',2)">Ред.</button><button class="btn btn-red" onclick="del('instructions',2)">Удалить</button></div>
+    </div><div class="card instruction-card" data-category="Нейросети">
+      <div class="instruction-icon"></div>
+      <h3>Инструкция №4. Работа с нейрографикой</h3>
+      <p>Шедеврум и Kandinsky: генерация иллюстраций, проверка физической корректности, визуальные аналогии</p>
+      <div class="tags">
+        <span class="tag">Нейросети</span>
+        <span class="tag">Лаб. №6 (Визуализация)</span>
+      </div>
+      <a href="https://disk.yandex.ru/i/oIvoxsMKMUIUoA" target="_blank" class="btn btn-green">Скачать PDF</a>
+      <div class="card-admin active"><button class="btn" onclick="showForm('instructions',3)">Ред.</button><button class="btn btn-red" onclick="del('instructions',3)">Удалить</button></div>
+    </div><div class="card instruction-card" data-category="Публикация">
+      <div class="instruction-icon"></div>
+      <h3>Инструкция №5. Публикация сайта на Netlify</h3>
+      <p>Пошаговая инструкция: подготовка папки, drag-and-drop, изменение имени сайта, обновление</p>
+      <div class="tags">
+        <span class="tag">Публикация</span>
+        <span class="tag">Лаб. №8, №15</span>
+      </div>
+      <a href="https://disk.yandex.ru/i/Y_S0_0qPS6n9ig" target="_blank" class="btn btn-green">Скачать PDF</a>
+      <div class="card-admin active"><button class="btn" onclick="showForm('instructions',4)">Ред.</button><button class="btn btn-red" onclick="del('instructions',4)">Удалить</button></div>
+    </div><div class="card instruction-card" data-category="Публикация">
+      <div class="instruction-icon"></div>
+      <h3>Инструкция №6. Публикация сайта на GitHub Pages</h3>
+      <p>Профессиональный подход: создание репозитория, загрузка файлов, включение Pages, контроль версий</p>
+      <div class="tags">
+        <span class="tag">Публикация</span>
+        <span class="tag">Лаб. №15</span>
+      </div>
+      <a href="https://disk.yandex.ru/i/ba9db8wdW-0rfA" target="_blank" class="btn btn-green">Скачать PDF</a>
+      <div class="card-admin active"><button class="btn" onclick="showForm('instructions',5)">Ред.</button><button class="btn btn-red" onclick="del('instructions',5)">Удалить</button></div>
+    </div><div class="card instruction-card" data-category="Нейросети">
+      <div class="instruction-icon"></div>
+      <h3>Инструкция №7. Работа с DeepSeek</h3>
+      <p>Регистрация, генерация кода для симуляций, решение физических задач, сравнение с другими нейросетями</p>
+      <div class="tags">
+        <span class="tag">Нейросети</span>
+        <span class="tag">Лаб. №3, №8</span>
+      </div>
+      <a href="https://disk.yandex.ru/i/XCLnTakHoBdJ1g" target="_blank" class="btn btn-green">Скачать PDF</a>
+      <div class="card-admin active"><button class="btn" onclick="showForm('instructions',6)">Ред.</button><button class="btn btn-red" onclick="del('instructions',6)">Удалить</button></div>
+    </div><div class="card instruction-card" data-category="Нейросети">
+      <div class="instruction-icon"></div>
+      <h3>Инструкция №8. Работа с Qwen (Alibaba)</h3>
+      <p>Регистрация, мультимодальные возможности, анализ изображений, генерация методических материалов</p>
+      <div class="tags">
+        <span class="tag">Нейросети</span>
+        <span class="tag">Лаб. №1, №2, №6</span>
+      </div>
+      <a href="https://disk.yandex.ru/i/pWy8wwU_-KnuAg" target="_blank" class="btn btn-green">Скачать PDF</a>
+      <div class="card-admin active"><button class="btn" onclick="showForm('instructions',7)">Ред.</button><button class="btn btn-red" onclick="del('instructions',7)">Удалить</button></div>
+    </div><div class="card instruction-card" data-category="Нейросети">
+      <div class="instruction-icon"></div>
+      <h3>Инструкция №9. Leonardo AI для учителя физики</h3>
+      <p>Профессиональная нейрографика: регистрация, настройки, промпты для научных иллюстраций, проверка физической корректности</p>
+      <div class="tags">
+        <span class="tag">Нейросети</span>
+        <span class="tag">Лаб. №6 (Визуализация)</span>
+      </div>
+      <a href="https://disk.yandex.ru/i/FKFNgxsFE6HtFw" target="_blank" class="btn btn-green">Скачать PDF</a>
+      <div class="card-admin active"><button class="btn" onclick="showForm('instructions',8)">Ред.</button><button class="btn btn-red" onclick="del('instructions',8)">Удалить</button></div>
+    </div></div></section></main>
 
 <div id="formPanel" class="form-panel">
 <h3 id="formTitle">Добавить запись</h3>
@@ -126,7 +365,7 @@ footer{background:#1a3a5c;color:#fff;padding:1.5rem 1rem;margin-top:2rem}
 
 <div id="modalBg" class="modal-bg" onclick="if(event.target===this)closeModal()">
 <div class="modal-box">
-<button class="modal-close" onclick="closeModal()">&times;</button>
+<button class="modal-close" onclick="closeModal()">×</button>
 <div id="modalBody"></div>
 </div>
 </div>
@@ -137,7 +376,7 @@ footer{background:#1a3a5c;color:#fff;padding:1.5rem 1rem;margin-top:2rem}
     <img src="logo_bgpu.png" alt="Физ-мат БГПУ">
   </div>
   <div class="footer-center">
-    <p>&copy; 2026 Лабораторный практикум "Цифровые помощники учителя физики"</p>
+    <p>© 2026 Лабораторный практикум "Цифровые помощники учителя физики"</p>
     <p style="margin-top:.5rem;font-size:.85rem;opacity:.8">При разработке использованы нейросети: Qwen, GigaChat, YandexGPT, DeepSeek</p>
     <p style="margin-top:.5rem"><a onclick="showLogin()">Вход для преподавателя</a></p>
   </div>
@@ -152,7 +391,492 @@ const PWD = "physics2026";
 let editSec = null, editIdx = null;
 
 // ===DATA_START===
-let D = JSON.parse(localStorage.getItem('physSite_v2')) || JSON.parse(JSON.stringify(DEFAULT_DATA));
+let D = {
+  "course": {
+    "title": "Цифровые помощники учителя физики",
+    "discipline": "Создание и использование электронных образовательных ресурсов",
+    "author": "Зеленкевич В.М. доцент кафедры физики и методики преподавания физики",
+    "description": "Практикум включает 16 лабораторных работ и 11 семинарских занятий. Итоговый проект — персональный сайт-портфолио учителя физики."
+  },
+  "labs": [
+    {
+      "number": "1",
+      "title": "Основы педагогического промпт-инжиниринга",
+      "goal": "Освоить базовые техники составления запросов к нейросетям",
+      "tools": "YandexGPT, GigaChat, DeepSeek",
+      "product": "Мини-методичка «Библиотека идеальных промптов»",
+      "section": "Раздел 1",
+      "seminar": "Сем. №1, №2",
+      "video": "",
+      "image": "",
+      "pdf": "https://disk.yandex.ru/i/fhFtpkDbX_fhbw",
+      "content": "<h3>Цель</h3><p>Освоить базовые техники промпт-инжиниринга.</p><h3>Основные шаги</h3><ol><li>Регистрация в YandexGPT и GigaChat.</li><li>Сравнение «плохого» и «хорошего» промпта.</li><li>Освоение ролевых промптов.</li></ol><h3>Результат</h3><p>Мини-методичка (PDF, 4–6 страниц).</p>"
+    },
+    {
+      "number": "2",
+      "title": "ИИ как методист: проектирование плана урока",
+      "goal": "Научиться генерировать структуру урока с помощью ИИ",
+      "tools": "GigaChat, YandexGPT, DeepSeek",
+      "product": "Технологическая карта урока",
+      "section": "Раздел 1",
+      "seminar": "Сем. №1, №2",
+      "video": "",
+      "image": "",
+      "pdf": "https://disk.yandex.ru/i/ylzJRZNBwERa1w",
+      "content": "<h3>Цель</h3><p>Сгенерировать технологическую карту урока.</p><h3>Шаги</h3><ol><li>Задать роль методиста.</li><li>Расписать этапы урока.</li><li>Сформулировать цели.</li></ol>"
+    },
+    {
+      "number": "3",
+      "title": "Генерация дидактических материалов",
+      "goal": "Генерация разноуровневых задач с верификацией",
+      "tools": "YandexGPT, DeepSeek",
+      "product": "Банк разноуровневых задач",
+      "section": "Раздел 1",
+      "seminar": "Сем. №3, №4, №5",
+      "video": "",
+      "image": "",
+      "pdf": "https://disk.yandex.ru/i/mi4j8I23zVtTbA",
+      "content": "<h3>Цель</h3><p>Создать банк задач с верификацией.</p><h3>Шаги</h3><ol><li>Сгенерировать задачи.</li><li>Перерешать вручную.</li><li>Двойная верификация.</li></ol>"
+    },
+    {
+      "number": "4",
+      "title": "Проектирование мотивационного этапа",
+      "goal": "Генерация «крючков внимания»",
+      "tools": "YandexGPT, GigaChat",
+      "product": "Банк карточек «Крючки внимания»",
+      "section": "Раздел 1",
+      "seminar": "Сем. №2",
+      "video": "",
+      "image": "",
+      "pdf": "https://disk.yandex.ru/i/3GvYZjZ1QidpcA",
+      "content": "<h3>Цель</h3><p>Создать мотивационные материалы.</p>"
+    },
+    {
+      "number": "5",
+      "title": "Проектирование оценивания и рефлексии",
+      "goal": "Генерация рубрикаторов и чек-листов",
+      "tools": "GigaChat, DeepSeek",
+      "product": "Пакет рубрикаторов",
+      "section": "Раздел 2",
+      "seminar": "Сем. №5",
+      "video": "",
+      "image": "",
+      "pdf": "https://disk.yandex.ru/i/NAkOlqELb4RmEg",
+      "content": "<h3>Цель</h3><p>Освоить генерацию инструментов оценивания.</p>"
+    },
+    {
+      "number": "6",
+      "title": "Визуализация физических явлений",
+      "goal": "Нейрографика для физики",
+      "tools": "Kandinsky, Шедеврум, YandexART",
+      "product": "Пакет иллюстраций",
+      "section": "Раздел 2",
+      "seminar": "Сем. №6",
+      "video": "",
+      "image": "",
+      "pdf": "https://disk.yandex.ru/i/7DlKsn2uHDBe_Q",
+      "content": "<h3>Цель</h3><p>Создать визуальные ЭОР.</p>"
+    },
+    {
+      "number": "7",
+      "title": "Создание аудио- и видео-ЭОР",
+      "goal": "Подкасты и видеоролики с ИИ",
+      "tools": "Yandex SpeechKit, CapCut, Hailuo AI",
+      "product": "Аудио/видео файл",
+      "section": "Раздел 2",
+      "seminar": "Сем. №9",
+      "video": "",
+      "image": "",
+      "pdf": "https://disk.yandex.ru/i/2pqZYj7QzaJLVg",
+      "content": "<h3>Цель</h3><p>Создать аудио/видео ЭОР.</p>"
+    },
+    {
+      "number": "8",
+      "title": "Web-кодинг: интерактивные симуляции",
+      "goal": "Генерация HTML/JS кода",
+      "tools": "DeepSeek, GigaChat + Блокнот",
+      "product": "HTML-файл модели",
+      "section": "Раздел 2",
+      "seminar": "Сем. №4, №7",
+      "video": "",
+      "image": "",
+      "pdf": "https://disk.yandex.ru/i/ouXpcPY6yFVC6g",
+      "content": "<h3>Цель</h3><p>Создать интерактивную симуляцию.</p><h3>Шаги</h3><ol><li>Промпт для ИИ.</li><li>Сохранить как .html.</li><li>Итерация и доработка.</li></ol>"
+    },
+    {
+      "number": "9",
+      "title": "Создание тестов с использованием ИИ",
+      "goal": "Автоматизированные тесты",
+      "tools": "YandexGPT, DeepSeek + Яндекс.Формы",
+      "product": "Ссылка на тест",
+      "section": "Раздел 3",
+      "seminar": "Сем. №3, №5",
+      "video": "",
+      "image": "",
+      "pdf": "https://disk.yandex.ru/i/9JO0898CX5nh1A",
+      "content": "<h3>Цель</h3><p>Создать тест с обратной связью.</p>"
+    },
+    {
+      "number": "10",
+      "title": "Цифровые рабочие листы",
+      "goal": "Digital Worksheets",
+      "tools": "Kimi, GigaChat + Яндекс.Документы",
+      "product": "Ссылка на рабочий лист",
+      "section": "Раздел 3",
+      "seminar": "Сем. №8",
+      "video": "",
+      "image": "",
+      "pdf": "https://disk.yandex.ru/i/tWHLv70NVFWILg",
+      "content": "<h3>Цель</h3><p>Создать цифровой рабочий лист.</p>"
+    },
+    {
+      "number": "11",
+      "title": "ИИ-презентации",
+      "goal": "Сборка презентации урока",
+      "tools": "Gamma.app, GigaChat + PowerPoint",
+      "product": "Презентация",
+      "section": "Раздел 3",
+      "seminar": "Сем. №6",
+      "video": "",
+      "image": "",
+      "pdf": "https://disk.yandex.ru/i/9CCMoNBnO9UgWA",
+      "content": "<h3>Цель</h3><p>Создать презентацию урока.</p>"
+    },
+    {
+      "number": "12",
+      "title": "Методика включения ЦОР",
+      "goal": "Встраивание ЭОР в урок",
+      "tools": "GigaChat, DeepSeek",
+      "product": "Технологическая карта фрагмента",
+      "section": "Раздел 3",
+      "seminar": "Сем. №7, №8",
+      "video": "",
+      "image": "",
+      "pdf": "https://disk.yandex.ru/i/9VxevrfXIbin2g",
+      "content": "<h3>Цель</h3><p>Освоить методику применения ЭОР.</p>"
+    },
+    {
+      "number": "13",
+      "title": "Геймификация урока",
+      "goal": "Образовательные квесты",
+      "tools": "GigaChat, Kandinsky",
+      "product": "Сценарий квеста",
+      "section": "Раздел 4",
+      "seminar": "Сем. №8",
+      "video": "",
+      "image": "",
+      "pdf": "https://disk.yandex.ru/i/Qzr54WpCHTs3-A",
+      "content": "<h3>Цель</h3><p>Создать игровой формат урока.</p>"
+    },
+    {
+      "number": "14",
+      "title": "ИИ-ассистент для формирующего оценивания",
+      "goal": "Персонализированные комментарии",
+      "tools": "YandexGPT, DeepSeek",
+      "product": "Банк комментариев",
+      "section": "Раздел 4",
+      "seminar": "Сем. №3, №5",
+      "video": "",
+      "image": "",
+      "pdf": "https://disk.yandex.ru/i/WcSKzGYd5TTIAw",
+      "content": "<h3>Цель</h3><p>Освоить формирующее оценивание.</p>"
+    },
+    {
+      "number": "15",
+      "title": "Сборка сайта-портфолио",
+      "goal": "Интеграция ЭОР",
+      "tools": "HTML-шаблон + Блокнот",
+      "product": "Опубликованный сайт",
+      "section": "Раздел 4",
+      "seminar": "Сем. №9, №10",
+      "video": "",
+      "image": "",
+      "pdf": "https://disk.yandex.ru/i/ujDSsmelDoGiAQ",
+      "content": "<h3>Цель</h3><p>Собрать сайт-портфолио.</p>"
+    },
+    {
+      "number": "16",
+      "title": "Итоговая защита проекта",
+      "goal": "Публичная презентация",
+      "tools": "Персональный сайт",
+      "product": "Видеозапись фрагмента урока",
+      "section": "Раздел 4",
+      "seminar": "Сем. №11",
+      "video": "",
+      "image": "",
+      "pdf": "https://disk.yandex.ru/i/HGZmS_llcay33A",
+      "content": "<h3>Цель</h3><p>Защитить итоговый проект.</p>"
+    }
+  ],
+  "seminars": [
+    {
+      "number": "1",
+      "title": "Вводный. Роль ЭОР в уроке физики",
+      "form": "Лекция-дискуссия",
+      "linked_labs": "Подготовительный к Лаб. №1",
+      "description": "Обзор бесплатных ИИ-сервисов"
+    },
+    {
+      "number": "2",
+      "title": "Промпт как педагогический инструмент",
+      "form": "Мастер-класс",
+      "linked_labs": "Закрепление Лаб. №1",
+      "description": "Разбор удачных запросов"
+    },
+    {
+      "number": "3",
+      "title": "Проблема «ИИ-галлюцинаций»",
+      "form": "Кейс-стади",
+      "linked_labs": "Сквозной для Лаб. №3, №9, №14",
+      "description": "Разбор ошибок ИИ"
+    },
+    {
+      "number": "4",
+      "title": "Сравнение российских и китайских нейросетей",
+      "form": "Практическое сравнение",
+      "linked_labs": "Подготовительный к Лаб. №3, №8",
+      "description": "YandexGPT vs DeepSeek vs GigaChat"
+    },
+    {
+      "number": "5",
+      "title": "Дифференциация обучения с помощью ИИ",
+      "form": "Анализ заданий",
+      "linked_labs": "Сопровождение Лаб. №3, №5",
+      "description": "Работа с разными уровнями"
+    },
+    {
+      "number": "6",
+      "title": "Визуальный язык физики",
+      "form": "Критический анализ",
+      "linked_labs": "Подготовительный к Лаб. №6",
+      "description": "Где ИИ искажает физику"
+    },
+    {
+      "number": "7",
+      "title": "Методика использования ЭОР",
+      "form": "Микро-преподавание",
+      "linked_labs": "Сопровождение Лаб. №8, №12",
+      "description": "Фрагменты уроков с ЭОР"
+    },
+    {
+      "number": "8",
+      "title": "Смешанное обучение",
+      "form": "Проектирование в группах",
+      "linked_labs": "Подготовительный к Лаб. №10, №13",
+      "description": "Перевёрнутый класс"
+    },
+    {
+      "number": "9",
+      "title": "Цифровая этика учителя",
+      "form": "Дискуссия",
+      "linked_labs": "Сквозной для Лаб. №7, №15",
+      "description": "Авторское право, данные"
+    },
+    {
+      "number": "10",
+      "title": "Критерии качественного ЭОР",
+      "form": "Выработка чек-листа",
+      "linked_labs": "Подготовительный к Лаб. №15",
+      "description": "Подготовка к защите"
+    },
+    {
+      "number": "11",
+      "title": "Итоговый семинар-защита",
+      "form": "Защита проектов",
+      "linked_labs": "Завершение Лаб. №16",
+      "description": "Презентация сайтов"
+    }
+  ],
+  "tools": [
+    {
+      "name": "YandexGPT",
+      "category": "Текстовые нейросети",
+      "url": "https://yandex.ru/chat",
+      "description": "Основной инструмент для промпт-инжиниринга"
+    },
+    {
+      "name": "GigaChat",
+      "category": "Текстовые нейросети",
+      "url": "https://giga.chat",
+      "description": "Альтернатива от Сбера"
+    },
+    {
+      "name": "DeepSeek",
+      "category": "Текстовые нейросети",
+      "url": "https://chat.deepseek.com",
+      "description": "Эффективна для физики и кода"
+    },
+    {
+      "name": "Kimi",
+      "category": "Текстовые нейросети",
+      "url": "https://kimi.ai",
+      "description": "Работа с длинными документами"
+    },
+    {
+      "name": "Kandinsky",
+      "category": "Нейрографика",
+      "url": "https://fusionbrain.ai",
+      "description": "Генерация изображений"
+    },
+    {
+      "name": "YandexART",
+      "category": "Нейрографика",
+      "url": "https://art.yandex.ru",
+      "description": "Альтернатива Kandinsky"
+    },
+    {
+      "name": "Шедеврум",
+      "category": "Нейрографика",
+      "url": "https://shedevrum.ai",
+      "description": "Генератор от Яндекса"
+    },
+    {
+      "name": "Jimeng AI",
+      "category": "Нейрографика",
+      "url": "https://jimeng.jianying.com",
+      "description": "Китайский генератор"
+    },
+    {
+      "name": "Hailuo AI",
+      "category": "Видеогенерация",
+      "url": "https://hailuoai.video",
+      "description": "Генерация видеороликов"
+    },
+    {
+      "name": "Gamma.app",
+      "category": "Презентации",
+      "url": "https://gamma.app",
+      "description": "ИИ-генератор презентаций"
+    },
+    {
+      "name": "Яндекс.Формы",
+      "category": "Тесты",
+      "url": "https://forms.yandex.ru",
+      "description": "Автоматизированные тесты"
+    },
+    {
+      "name": "Notion",
+      "category": "Сайты",
+      "url": "https://notion.so",
+      "description": "Платформа для сайтов"
+    }
+  ],
+  "prompts": [
+    {
+      "title": "Промпт для объяснения темы",
+      "description": "Универсальный запрос",
+      "category": "Дидактика",
+      "prompt_text": "Ты — учитель физики. Объясни тему '[ТЕМА]' девятиклассникам в формате короткого текста (не более 200 слов). Используй одну бытовую аналогию."
+    },
+    {
+      "title": "Промпт для генерации задач",
+      "description": "Разноуровневые задачи",
+      "category": "Дидактика",
+      "prompt_text": "Ты — методист по физике. Сгенерируй 4 расчётные задачи по теме '[ТЕМА]' для [КЛАСС] класса: 2 базовых, 1 повышенный, 1 олимпиадный."
+    },
+    {
+      "title": "Промпт для плана урока",
+      "description": "Технологическая карта",
+      "category": "Проектирование",
+      "prompt_text": "Ты — учитель физики высшей категории. Разработай технологическую карту урока для [КЛАСС] класса по теме '[ТЕМА]'."
+    },
+    {
+      "title": "Промпт для «крючка внимания»",
+      "description": "Проблемные ситуации",
+      "category": "Мотивация",
+      "prompt_text": "Придумай 3 варианта «крючка внимания» для урока физики в [КЛАСС] классе по теме '[ТЕМА]'."
+    },
+    {
+      "title": "Промпт для Web-кодинга",
+      "description": "Интерактивная модель",
+      "category": "Программирование",
+      "prompt_text": "Действуй как Senior Web-разработчик. Напиши код интерактивной физической симуляции на HTML/CSS/JS. Тема: [ТЕМА]."
+    }
+  ],
+  "instructions": [
+    {
+      "number": "1",
+      "title": "Регистрация на Яндекс.Диске",
+      "description": "Как зарегистрироваться, создавать папки, загружать PDF-методички и получать публичные ссылки для сайта",
+      "category": "Регистрация",
+      "file": "https://disk.yandex.ru/i/td0T3vYSY2JBqQ",
+      "related_labs": "Все лабораторные работы",
+      "icon": ""
+    },
+    {
+      "number": "2",
+      "title": "Первые шаги в GigaChat",
+      "description": "Регистрация через Сбер ID, написание промптов для генерации кода физических симуляций",
+      "category": "Нейросети",
+      "file": "https://disk.yandex.ru/i/l0jMZRN8WxU0xg",
+      "related_labs": "Лаб. №8 (Web-кодинг)",
+      "icon": ""
+    },
+    {
+      "number": "3",
+      "title": "Первые шаги в YandexGPT",
+      "description": "Регистрация через Яндекс ID, составление педагогических промптов для методических материалов",
+      "category": "Нейросети",
+      "file": "https://disk.yandex.ru/i/nsfsJk0gRaGebQ",
+      "related_labs": "Лаб. №1, №2, №3, №4",
+      "icon": ""
+    },
+    {
+      "number": "4",
+      "title": "Работа с нейрографикой",
+      "description": "Шедеврум и Kandinsky: генерация иллюстраций, проверка физической корректности, визуальные аналогии",
+      "category": "Нейросети",
+      "file": "https://disk.yandex.ru/i/oIvoxsMKMUIUoA",
+      "related_labs": "Лаб. №6 (Визуализация)",
+      "icon": ""
+    },
+    {
+      "number": "5",
+      "title": "Публикация сайта на Netlify",
+      "description": "Пошаговая инструкция: подготовка папки, drag-and-drop, изменение имени сайта, обновление",
+      "category": "Публикация",
+      "file": "https://disk.yandex.ru/i/Y_S0_0qPS6n9ig",
+      "related_labs": "Лаб. №8, №15",
+      "icon": ""
+    },
+    {
+      "number": "6",
+      "title": "Публикация сайта на GitHub Pages",
+      "description": "Профессиональный подход: создание репозитория, загрузка файлов, включение Pages, контроль версий",
+      "category": "Публикация",
+      "file": "https://disk.yandex.ru/i/ba9db8wdW-0rfA",
+      "related_labs": "Лаб. №15",
+      "icon": ""
+    },
+    {
+      "number": "7",
+      "title": "Работа с DeepSeek",
+      "description": "Регистрация, генерация кода для симуляций, решение физических задач, сравнение с другими нейросетями",
+      "category": "Нейросети",
+      "file": "https://disk.yandex.ru/i/XCLnTakHoBdJ1g",
+      "related_labs": "Лаб. №3, №8",
+      "icon": ""
+    },
+    {
+      "number": "8",
+      "title": "Работа с Qwen (Alibaba)",
+      "description": "Регистрация, мультимодальные возможности, анализ изображений, генерация методических материалов",
+      "category": "Нейросети",
+      "file": "https://disk.yandex.ru/i/pWy8wwU_-KnuAg",
+      "related_labs": "Лаб. №1, №2, №6",
+      "icon": ""
+    },
+    {
+      "number": "9",
+      "title": "Leonardo AI для учителя физики",
+      "description": "Профессиональная нейрографика: регистрация, настройки, промпты для научных иллюстраций, проверка физической корректности",
+      "category": "Нейросети",
+      "file": "https://disk.yandex.ru/i/FKFNgxsFE6HtFw",
+      "related_labs": "Лаб. №6 (Визуализация)",
+      "icon": ""
+    }
+  ]
+};
 // ===DATA_END===
 
 const DEFAULT_DATA = {
@@ -471,5 +1195,5 @@ function closeModal(){document.getElementById('modalBg').style.display='none';do
 
 render();
 </script>
-</body>
-</html>
+
+</body></html>
