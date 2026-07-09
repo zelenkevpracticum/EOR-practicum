@@ -117,7 +117,7 @@ footer{background:#1a3a5c;color:#fff;padding:1.5rem 1rem;margin-top:2rem}
     <p><b>Автор:</b> Зеленкевич В.М. доцент кафедры физики и методики преподавания физики</p>
     <p style="margin-top:.8rem">Практикум включает 16 лабораторных работ и 11 семинарских занятий. Итоговый проект — персональный сайт-портфолио учителя физики.</p>
     <div class="stats">
-      <div class="stat-box"><span class="num">16</span><span class="lbl">Лабораторных</span></div>
+      <div class="stat-box"><span class="num">17</span><span class="lbl">Лабораторных</span></div>
       <div class="stat-box"><span class="num">11</span><span class="lbl">Семинаров</span></div>
       <div class="stat-box"><span class="num">12</span><span class="lbl">Инструментов</span></div>
       <div class="stat-box"><span class="num">5</span><span class="lbl">Промптов</span></div>
@@ -170,7 +170,10 @@ footer{background:#1a3a5c;color:#fff;padding:1.5rem 1rem;margin-top:2rem}
       <p><b>Продукт:</b> Опубликованный сайт</p><div class="tags"><span class="tag">Раздел 4</span><span class="tag">Сем. №9, №10</span></div><button class="btn" onclick="openModal('&lt;h2&gt;№15. Сборка сайта-портфолио&lt;/h2&gt;&lt;h3&gt;Цель&lt;/h3&gt;&lt;p&gt;Собрать сайт-портфолио.&lt;/p&gt;')">Описание</button><a href="https://disk.yandex.ru/i/ujDSsmelDoGiAQ" target="_blank" class="btn btn-green" style="margin-left:.5rem">PDF</a><div class="card-admin active"><button class="btn" onclick="showForm('labs',14)">Ред.</button><button class="btn btn-red" onclick="del('labs',14)">Удалить</button></div></div><div class="card"><h3>№16. Итоговая защита проекта</h3>
       <p><b>Цель:</b> Публичная презентация</p>
       <p><b>Инструменты:</b> Персональный сайт</p>
-      <p><b>Продукт:</b> Видеозапись фрагмента урока</p><div class="tags"><span class="tag">Раздел 4</span><span class="tag">Сем. №11</span></div><button class="btn" onclick="openModal('&lt;h2&gt;№16. Итоговая защита проекта&lt;/h2&gt;&lt;h3&gt;Цель&lt;/h3&gt;&lt;p&gt;Защитить итоговый проект.&lt;/p&gt;')">Описание</button><a href="https://disk.yandex.ru/i/HGZmS_llcay33A" target="_blank" class="btn btn-green" style="margin-left:.5rem">PDF</a><div class="card-admin active"><button class="btn" onclick="showForm('labs',15)">Ред.</button><button class="btn btn-red" onclick="del('labs',15)">Удалить</button></div></div></div></section><section id="seminars"><h2>Семинары</h2><div class="cards"><div class="card"><h3>Семинар №1. Вводный. Роль ЭОР в уроке физики</h3>
+      <p><b>Продукт:</b> Видеозапись фрагмента урока</p><div class="tags"><span class="tag">Раздел 4</span><span class="tag">Сем. №11</span></div><button class="btn" onclick="openModal('&lt;h2&gt;№16. Итоговая защита проекта&lt;/h2&gt;&lt;h3&gt;Цель&lt;/h3&gt;&lt;p&gt;Защитить итоговый проект.&lt;/p&gt;')">Описание</button><a href="https://disk.yandex.ru/i/HGZmS_llcay33A" target="_blank" class="btn btn-green" style="margin-left:.5rem">PDF</a><div class="card-admin active"><button class="btn" onclick="showForm('labs',15)">Ред.</button><button class="btn btn-red" onclick="del('labs',15)">Удалить</button></div></div><div class="card"><h3>№17. Редактирование</h3>
+      <p><b>Цель:</b> Освоить процедуру внесения изменений в содержание сайта</p>
+      <p><b>Инструменты:</b> GigaChat, YandexGPT</p>
+      <p><b>Продукт:</b> Методичка PDF</p><div class="tags"><span class="tag">Раздел 4</span><span class="tag">Сем. №11</span></div><a href="https://disk.yandex.ru/i/SQbOHYVvVjGuzA" target="_blank" class="btn btn-green" style="margin-left:.5rem">PDF</a><div class="card-admin active"><button class="btn" onclick="showForm('labs',16)">Ред.</button><button class="btn btn-red" onclick="del('labs',16)">Удалить</button></div></div></div></section><section id="seminars"><h2>Семинары</h2><div class="cards"><div class="card"><h3>Семинар №1. Вводный. Роль ЭОР в уроке физики</h3>
       <p>Обзор бесплатных ИИ-сервисов</p><p><b>Форма:</b> Лекция-дискуссия</p>
       <p style="font-size:.85rem;color:#888"><b>Связь:</b> Подготовительный к Лаб. №1</p>
       <div class="card-admin active"><button class="btn" onclick="showForm('seminars',0)">Ред.</button><button class="btn btn-red" onclick="del('seminars',0)">Удалить</button></div></div><div class="card"><h3>Семинар №2. Промпт как педагогический инструмент</h3>
@@ -355,9 +358,9 @@ footer{background:#1a3a5c;color:#fff;padding:1.5rem 1rem;margin-top:2rem}
     </div></div></section></main>
 
 <div id="formPanel" class="form-panel">
-<h3 id="formTitle">Добавить запись</h3>
+<h3 id="formTitle">Добавить: Лабораторная работа</h3>
 <form id="editForm" onsubmit="saveItem(event)">
-<div id="formFields"></div>
+<div id="formFields"><label>№ работы</label><input type="text" name="number" value=""><label>Название</label><input type="text" name="title" value=""><label>Цель</label><textarea name="goal"></textarea><label>Инструменты</label><input type="text" name="tools" value=""><label>Цифровой продукт</label><input type="text" name="product" value=""><label>Раздел</label><input type="text" name="section" value=""><label>Связь с семинарами</label><input type="text" name="seminar" value=""><label>Ссылка на видео</label><input type="text" name="video" value=""><label>Ссылка на изображение</label><input type="text" name="image" value=""><label>Ссылка на PDF</label><input type="text" name="pdf" value=""><label>Краткое описание (HTML)</label><textarea name="content"></textarea></div>
 <button type="submit" class="btn btn-green">Сохранить</button>
 <button type="button" class="btn btn-gray" onclick="hideForm()">Отмена</button>
 </form>
@@ -606,6 +609,19 @@ let D = {
       "image": "",
       "pdf": "https://disk.yandex.ru/i/HGZmS_llcay33A",
       "content": "<h3>Цель</h3><p>Защитить итоговый проект.</p>"
+    },
+    {
+      "number": "17",
+      "title": "Редактирование",
+      "goal": "Освоить процедуру внесения изменений в содержание сайта",
+      "tools": "GigaChat, YandexGPT",
+      "product": "Методичка PDF",
+      "section": "Раздел 4",
+      "seminar": "Сем. №11",
+      "video": "",
+      "image": "",
+      "pdf": "https://disk.yandex.ru/i/SQbOHYVvVjGuzA",
+      "content": ""
     }
   ],
   "seminars": [
