@@ -39,6 +39,7 @@ section h2{color:#1a3a5c;margin-bottom:1rem;padding-bottom:.5rem;border-bottom:3
 .btn-red{background:#e53e3e}.btn-red:hover{background:#c53030}
 .btn-gray{background:#718096}.btn-gray:hover{background:#4a5568}
 .btn-green{background:#38a169}.btn-green:hover{background:#2f855a}
+.btn-blue{background:#3182ce}.btn-blue:hover{background:#2c5282}
 .admin-bar{display:none;background:#fff3cd;border:2px solid #ffc107;padding:.8rem 1rem;margin:1rem auto;max-width:1200px;border-radius:8px;text-align:center}
 .admin-bar.active{display:block}
 .admin-bar .btn{margin:.2rem}
@@ -102,7 +103,8 @@ footer{background:#1a3a5c;color:#fff;padding:1.5rem 1rem;margin-top:2rem}
 <button class="btn" onclick="showForm('tools')">+ Инструмент</button>
 <button class="btn" onclick="showForm('prompts')">+ Промпт</button>
 <button class="btn btn-green" onclick="showForm('instructions')">+ Инструкцию</button>
-<button class="btn btn-green" onclick="exportJSON()">Экспорт</button>
+<button class="btn btn-green" onclick="exportJSON()">Экспорт JSON</button>
+<button class="btn btn-blue" onclick="exportHTML()">📥 Скачать index.html</button>
 <button class="btn btn-green" onclick="document.getElementById('impFile').click()">Импорт</button>
 <input type="file" id="impFile" accept=".json" style="display:none" onchange="importJSON(event)">
 <button class="btn btn-gray" onclick="resetData()">Сбросить</button>
@@ -148,6 +150,10 @@ footer{background:#1a3a5c;color:#fff;padding:1.5rem 1rem;margin-top:2rem}
 <script>
 const PWD = "physics2026";
 let editSec = null, editIdx = null;
+
+// ===DATA_START===
+let D = JSON.parse(localStorage.getItem('physSite_v2')) || JSON.parse(JSON.stringify(DEFAULT_DATA));
+// ===DATA_END===
 
 const DEFAULT_DATA = {
   course: {
@@ -221,7 +227,6 @@ const DEFAULT_DATA = {
   ]
 };
 
-let D = JSON.parse(localStorage.getItem('physSite_v2')) || JSON.parse(JSON.stringify(DEFAULT_DATA));
 const admin = sessionStorage.getItem('adm') === '1';
 
 function save(){localStorage.setItem('physSite_v2',JSON.stringify(D))}
@@ -241,6 +246,33 @@ function exportJSON(){
   a.click();
   alert('Бэкап создан!');
 }
+
+function exportHTML() {
+  if(!confirm('⚠️ Будет скачан файл index.html со всеми текущими данными.\n\nЗагрузите его на GitHub, заменив старый файл.\n\nПродолжить?')) return;
+  
+  const currentData = JSON.stringify(D, null, 2);
+  
+  let html = document.documentElement.outerHTML;
+  
+  html = html.replace(
+    /\/\/ ===DATA_START===[\s\S]*?\/\/ ===DATA_END===/,
+    `// ===DATA_START===\nlet D = ${currentData};\n// ===DATA_END===`
+  );
+  
+  html = '<!DOCTYPE html>\n' + html;
+  
+  const blob = new Blob([html], {type: 'text/html;charset=utf-8'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'index.html';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(a.href);
+  
+  alert('✅ Файл index.html скачан!\n\nТеперь загрузите его на GitHub:\n1. Зайдите в репозиторий EOR-practicum\n2. Нажмите на index.html\n3. Нажмите иконку карандаша (Edit)\n4. Выделите всё (Ctrl+A) и удалите\n5. Вставьте содержимое скачанного файла\n6. Нажмите Commit changes');
+}
+
 function importJSON(e){
   const f=e.target.files[0];if(!f)return;
   if(!confirm('Импорт заменит текущие данные. Продолжить?'))return;
